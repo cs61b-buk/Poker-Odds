@@ -176,6 +176,7 @@ class PokerOdds:
         highCardOdds = 100 - sum(list(self.probs.values())[1:-1])
         self.probs[' 1. High Card: '] = max(0, highCardOdds)
         plot_probabilities(self.probs)
+# Test our code for some cards:
 Odds = PokerOdds(); Odds.holeCards()
 flopCard1 = Card('Clubs', '10')
 flopCard2 = Card('Hearts', 'Jack')
