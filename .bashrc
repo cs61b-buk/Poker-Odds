@@ -30,11 +30,12 @@ shopt -s globstar
 # Change color to preferred theme:
 alias dt='printf "\033[32m\033[47m"'
 alias nt='printf "\033[31m\033[47m"'
+printf '\033[31m\033[47m'
 
 # Allow SSH:
 alias allow='sudo apt install openssh-server & sudo ufw allow 22'
 # Get SSH ip address:
-alias ssh='ip  a | grep "inet"'
+alias ssh='ip  a | grep "inet "'
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
