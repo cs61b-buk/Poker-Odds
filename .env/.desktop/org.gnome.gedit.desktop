@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Editor
+Exec=/usr/bin/gedit
+Icon=gedit
+Terminal=false
+Type=Application
+NoDisplay=false

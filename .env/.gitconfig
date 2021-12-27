@@ -1,0 +1,13 @@
+[core]
+    username = 'David Colby'
+    useremail = 'davidcolbycode@gmail.com'
+    repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/cs61b-buk/Poker-Odds.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	remote = origin
+	merge = refs/heads/main

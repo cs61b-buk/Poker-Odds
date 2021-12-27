@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=IBus-Unikey Setup
+Type=Application
+Exec=/usr/libexec/ibus-setup-unikey
+Icon=/usr/share/ibus-unikey/icons/ibus-unikey.svg
+NoDisplay=true
+StartupNotify=true

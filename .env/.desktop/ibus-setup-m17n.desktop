@@ -1,0 +1,21 @@
+[Desktop Entry]
+Name[de]=IBus M17n Einstellungen
+Name[tr]=IBus M17N Kurulumu
+Name[uk]=Налаштування M17N IBus
+Name[id]=IBus M17N Setup
+Name[ja]=IBus M17N の設定
+Name[fr]=Configuration d’IBus M17N
+Name[es]=Ajuste IBus M17N
+Name=IBus M17N Setup
+Comment[de]=IBus M17N Einstellungen
+Comment[tr]=IBus M17N motorunu kur
+Comment[uk]=Налаштувати рушій M17N IBus
+Comment[id]=Set up IBus M17N mesin
+Comment[ja]=IBus M17n エンジンを設定する
+Comment[fr]=Configurer le moteur IBus M17N
+Comment[es]=Ajuste motor IBus M17N
+Comment=Set up IBus M17N engine
+Exec=/usr/libexec/ibus-setup-m17n
+NoDisplay=true
+Type=Application
+StartupNotify=true

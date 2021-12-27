@@ -1,22 +1,23 @@
 set nu
 syntax on
-cmap c color
 cmap !q q!
 cmap !Q q!
-set showmode
 nnoremap p N
-inoremap <C-/> <C-c>/
-nnoremap <C-/> <CR>i
-inoremap <C-p> <C-c>Ni
-inoremap <C-n> <C-c>ni
-nnoremap <C-y> :w silent !python OneDrive\Desktop\TrueSkill_2.py<CR>
-inoremap <C-y> <Esc>:w silent !python OneDrive\Desktop\TrueSkill_2.py<CR>gi
-nnoremap <C-s> :update<CR>
+nnoremap :p :N
+set showmode
+inoremap <C-a> <Esc>:w! ! sudo tee % > /dev/null<CR>i
+nnoremap <C-a> :w! ! sudo tee % > /dev/null<CR>
+inoremap <C-c> <Esc>:color<CR>gi
+nnoremap <C-c> :color<CR>
 inoremap <C-s> <Esc>:update<CR>gi
+nnoremap <C-s> :update<CR>
 inoremap <C-z> <Esc>:u<CR>gi
 nnoremap <C-z> :u<CR>
-cmap m messages
+inoremap <C-r> <Esc>:r<CR>gi
+nnoremap <C-r> :r<CR>
 set backspace=indent,eol,start
+inoremap <C-g> <Esc>:messages<CR>gi
+nnoremap <C-g> :messages<CR>
 filetype plugin indent on
 set autowrite
 set virtualedit=onemore
@@ -40,9 +41,7 @@ set tabstop=4
 set softtabstop=4
 set pastetoggle=<F12>
 nnoremap A a
-nnoremap P p
-nnoremap W w
-nnoremap çQ q
+nnoremap Q q
 nnoremap aq qa
 nnoremap AQ qa
 nnoremap qw wq
@@ -55,8 +54,8 @@ set statusline+=%=
 set statusline+=%m
 set statusline+=\ %Y
 set statusline+=\ %3l/%L[%3p%%]
-nnoremap <Enter> :nohl<CR><C-l><Enter>
-nnoremap r <C-r>
+inoremap <Enter> <Esc>:nohl<CR>gi<CR>
+nnoremap <Enter> :nohl<CR><CR>
 set hlsearch
 set expandtab
 set tabstop=4
@@ -67,19 +66,10 @@ let mapleader=","
 nnoremap ; :
 nnoremap hs sp
 nnoremap vs vsp
-nnoremap <C-j> j 
+nnoremap <C-j> j
 nnoremap <C-k> k
 nnoremap <C-l> l
 nnoremap <C-h> h
-nnoremap <C-o> <C-w>o
-nnoremap + <C-W>+
-nnoremap = <C-W>=
-nnoremap - <C-W>-
-nnoremap <space> zz
-nnoremap n nzz
-nnoremap N Nzz
-nnoremap tt :tabm
-nnoremap td :tabclose<CR>
 nnoremap < <<
 nnoremap > >>
 nnoremap Y v$y
@@ -93,12 +83,8 @@ nnoremap c" ci"
 nnoremap c' ci'
 inoremap <C-j> <Esc>ji
 inoremap <C-k> <Esc>ki
-inoremap <C-l> <Esc>li
 inoremap <C-h> <Esc>hi
-vnoremap < <gv
-vnoremap > >gv
-vnoremap gy "+y
-vnoremap // y/<C-r>"<CR>
+inoremap <C-l> <Esc>li
 cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev A a
