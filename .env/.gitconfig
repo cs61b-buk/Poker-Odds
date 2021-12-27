@@ -1,6 +1,9 @@
 [core]
+<<<<<<< HEAD
     username = 'David Colby'
     useremail = 'davidcolbycode@gmail.com'
+=======
+>>>>>>> 1a1c065 (setup linux env)
     repositoryformatversion = 0
 	filemode = true
 	bare = false
@@ -11,3 +14,11 @@
 [branch "main"]
 	remote = origin
 	merge = refs/heads/main
+<<<<<<< HEAD
+=======
+[user]
+    name = David Colby
+    email = davidcolbycode@gmail.com
+[pull]
+	rebase = true
+>>>>>>> 1a1c065 (setup linux env)
