@@ -1,3 +1,4 @@
+PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$"
 alias sudoku='gnome-sudoku &'; alias h='history'; alias s='gnome-sudoku &'
 alias py='python3'; alias python='python3'; alias c='clear'
 alias pso='python3 ~/Poker-Odds/poker_odds.py'; alias sb='. ~/.bashrc'
