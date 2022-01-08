@@ -1,26 +1,30 @@
-alias dt='printf "\033[34;47m"'; printf "\033[34;47m"
-alias nt='printf "\033[31;47m"'; env IM_CONFIG_CHECK_ENV=1 im-launch true
-alias installbrave='sudo apt install apt-transport-https curl; sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg; echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list; sudo apt update; sudo apt install brave-browser'
+alias dt='printf "\033[32;49m"'; alias rt='printf "\033[31;49m"'
+alias d='su david'; alias time='date'; alias l='login'; alias lo='logout'
+env IM_CONFIG_CHECK_ENV=1 im-launch true; DISPLAY=:1; HISTSIZE=100
+alias restart='reboot'; alias r='reboot'; alias sd='shutdown'
+alias getbrave='sudo apt install apt-transport-https curl; sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg; echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list; sudo apt update; sudo apt install brave-browser'
 alias sudoku='gnome-sudoku &'; alias h='history'; alias s='gnome-sudoku &'
-alias py='python'; alias c='clear'; alias cls='clear'
+alias py='python'; alias c='clear'; alias cls='clear'; alias cmd='gnome-terminal';  alias sudocmd='sudo gnome-terminal'
 alias ppo='python ~/Poker-Odds/poker_odds.py'; alias sb='. ~/Poker-Odds/.env/.bashrc'
 alias setup='sudo apt install git && git clone github.com/cs61b-buk/Poker-Odds.git && sudo rm /etc/bash.bashrc && ln -s ~/Poker-Odds/.bashrc ~/.bashrc && sudo ln -s ~/.bashrc /etc/bash.bashrc'
 alias ps='ps -aux | grep $1'; alias sl='ln -s $1 $2'; alias g='grep'
-alias ge='gedit &'; alias t='gnome-terminal . &'; alias f='firefox &'
-alias st='sudo gnome-terminal .'; alias n='nautilus . &'; alias jn='jupyter-notebook'
-alias b='brave-browser &'; HISTSIZE=100; shopt -s globstar
-alias gitstats='git status && git log --graph --oneline'
-alias nostarred='brave-browser https://askubuntu.com/questions/1194319/can-the-starred-folder-in-the-left-pane-of-files-nautilus-be-removed#1248774'
+alias ge='gedit & bg'; alias t='gnome-terminal . & bg'; alias f='firefox & bg'
+alias st='sudo gnome-terminal .'; alias n='nautilus . & bg'
+alias jn='jupyter-server --config="~/Poker-Odds/.env/jupyter_notebook_config.py" & bg'
+alias vjn='vim ~/Poker-Odds/.env/jupyter_notebook_config.py'
+alias b='brave-browser &'; alias e='exit'; alias jnl='jupyter-notebook list'
+alias gitstatus='git status && git log --graph --oneline'; alias gitcommit='git commit -am'
 alias notrash='gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false'
 alias ssh='sudo apt install openssh-server; sudo ufw allow 22; systemctl start ssh; ip a | grep "inet "'
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"; alias e='exit'
-alias installdesk='sudo apt install gnome-tweaks'; alias desk='gnome-tweaks'
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"; shopt -s globstar
+alias getdesk='sudo apt install gnome-tweaks'; alias desk='gnome-tweaks'
 alias update='sudo apt update && sudo apt full-upgrade && sudo apt autoremove'
 alias rh='rm -r ~/.dbus ~/.*hist* ~/.sudo_as_admin_successful ~/.viminfo ~/.vim'
-alias v='vim'; alias vi='vim'; alias vv='vim ~/.vimrc'
+alias find='find -D'; alias v='vim'; alias vi='vim'; alias vv='vim ~/.vimrc'
 alias vb='vim ~/Poker-Odds/.env/.bashrc'; alias vpo='vim ~/Poker-Odds/poker_odds.py'
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 alias la='ls -A'; alias ll='ls -lh'; alias lla='ls -lhA'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 echo 'To run commands as administrator, see "man sudo_root" for details.'
-PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@\h:\w\$ "
+alias timeit='/bin/time . 2> temp.txt; tail -2 temp.txt; rm temp.txt'
