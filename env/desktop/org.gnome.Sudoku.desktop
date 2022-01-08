@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=/usr/games/gnome-sudoku
+Icon=org.gnome.Sudoku
+Terminal=false
+Type=Application
+Name=Sudoku

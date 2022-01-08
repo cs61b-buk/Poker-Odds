@@ -17,7 +17,8 @@ FIRST ANSWER:
 First, I'm glad you hired me, since I can now help your company have a better IT infrastructure, starting with the following: Given that the HR person has been the one purchasing computers for the employees when they are hired, and the employees have been the ones setting up their own computers for work, I would like to take over both of those functions for the company; because that way I will be able to:
 (1) I can purchase computers that have the best up-to-date hardware, within the company's budget, of course, so that each employee's computer can last longer, so that we can save money in the long run;
 (2) I will set up an administrative account on each of the employee's computers, so that I can reset their password for them if they forget it, they will have to create a strong password for the machine, and they will have limited access to non-work activities, and also cannot mess up their computer, so that they will be more productive;
-(3) Currently, when an employee has a problem 
+(3) Currently, when an employee sets up their online work accounts, the HR person has to make sure that they can login, but with me around things will be different:
+I will email them their initial login info to each of their online work accounts, and if they have trouble with logging in, then they can email me directly.
 (4) 
 (5) 
 
