@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Backups
+Exec=deja-dup
+Terminal=false
+Type=Application
+Icon=org.gnome.DejaDup
+StartupNotify=true

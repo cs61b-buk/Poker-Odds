@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Tweaks
+Exec=gnome-tweaks
+Icon=org.gnome.Tweaks
+Terminal=false
+Type=Application
+StartupNotify=true

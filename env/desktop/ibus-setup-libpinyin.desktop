@@ -15,6 +15,5 @@ Comment[de]=ibus-libpinyin Optionen einstellen
 Comment=Set ibus-libpinyin Preferences
 Exec=/usr/libexec/ibus-setup-libpinyin libpinyin
 Icon=/usr/share/ibus-libpinyin/icons/ibus-pinyin.svg
-NoDisplay=true
 Type=Application
 StartupNotify=true

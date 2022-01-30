@@ -18,9 +18,10 @@ First, I'm glad you hired me, since I can now help your company have a better IT
 (1) I can purchase computers that have the best up-to-date hardware, within the company's budget, of course, so that each employee's computer can last longer, so that we can save money in the long run;
 (2) I will set up an administrative account on each of the employee's computers, so that I can reset their password for them if they forget it, they will have to create a strong password for the machine, and they will have limited access to non-work activities, and also cannot mess up their computer, so that they will be more productive;
 (3) Currently, when an employee sets up their online work accounts, the HR person has to make sure that they can login, but with me around things will be different:
-I will email them their initial login info to each of their online work accounts, and if they have trouble with logging in, then they can email me directly.
-(4) 
-(5) 
+I will email them their initial login info to each of their online work accounts, and if they have trouble with logging in, then they can email me directly;
+(4) Additionally, I will be available via Slack all work-day long, so whenever employees have any technological computer problems, they can and should contact me;
+and
+(5) Finally, to make sure that all computers are in the workplace, as they should be, I will put labels on each of them and we should only allow employees to use their work computers here at work, not their personal computers, or else they may be lost or stolen otherwise.
 
 SECOND SENARIO:
 
