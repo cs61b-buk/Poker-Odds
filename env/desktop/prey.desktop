@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Prey
-Exec=/usr/lib/prey/versions/1.9.16/bin/prey
-Terminal=false
-Type=Application
-Icon=/usr/lib/prey/versions/1.9.16/lib/conf/gui/pixmaps/conf/connect.bmp

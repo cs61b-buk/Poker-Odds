@@ -42,6 +42,11 @@ For 23, we have 11 quadratic residues:
 so the quadratic residues mod 23 are 1, 2, 3, 4, 6, 8, 9, 12, 13, 16 and 18.
 # Drop your proofs here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
+# My sudoku puzzle:
+http://localhost:8888/edit/Poker-Odds/Sudoku.py
+# Tutoring:
+https://mail.google.com/mail/u/2/#all
+https://www.learntobe.org/dashboard/85510
 # Quadratic formula proof:
 Given ax² + bx + c = 0 and a =/= 0, we have the following:
 x² + bx/a + c/a = 0, so x² + bx/a + (b/2a)² + c/a = (b/2a)²,
