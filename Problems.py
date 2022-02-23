@@ -1,3 +1,20 @@
+# Drop your proofs here:
+https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
+# Quadratic formula proof:
+Given ax² + bx + c = 0 and a =/= 0, we have the following:
+x² + bx/a + c/a = 0, so x² + bx/a + (b/2a)² + c/a = (b/2a)²,
+so x² + 2*x*(b/2a) + (b/2a)² = (bx/2a)² - c/a,
+so (x + b/2a)² = (b/2a)² - c/a, so (x + b/2a)² = b²/4a² - 4ac/4a²,
+so (x + b/2a)² = (b² - 4ac) / 4a², so x + b/2a = +- ²√(b² - 4ac) / ²√(4a²),
+so x = -b / 2a +- √(b² - 4ac) / 2a = [ -b +- √(b² - 4ac) ] / 2a.
+# Cubic formula proof:
+Given ax³ + bx² + cx + d = 0 and a =/= 0, we have the following:
+x³ + bx²/a + cx/a + d/a = 0
+# Quartic formula proof:
+Given ax⁴ + bx³ + cx² + dx + e = 0 and a =/= 0, we have the following:
+x⁴ + bx³/a + cx²/a + dx/a + e/a = 0
+# Absurdle:
+https://qntm.org/files/absurdle/absurdle.html
 # Find all quadratic residues mod 13, 16, 17, and 23:
 For 13, we have 6 quadratic residues:
 1² ==  1 (mod 13),
@@ -39,27 +56,7 @@ For 23, we have 11 quadratic residues:
  9² ==  81 (mod 23) == 12 (mod 23),
 10² == 100 (mod 23) ==  8 (mod 23),
 11² == 121 (mod 23) ==  6 (mod 23),
-so the quadratic residues mod 23 are 1, 2, 3, 4, 6, 8, 9, 12, 13, 16 and 18.
-# Drop your proofs here:
-https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
-# My sudoku puzzle:
-http://localhost:8888/edit/Poker-Odds/Sudoku.py
-# Tutoring:
-https://mail.google.com/mail/u/2/#all
-https://www.learntobe.org/dashboard/85510
-# Quadratic formula proof:
-Given ax² + bx + c = 0 and a =/= 0, we have the following:
-x² + bx/a + c/a = 0, so x² + bx/a + (b/2a)² + c/a = (b/2a)²,
-so x² + 2*x*(b/2a) + (b/2a)² = (bx/2a)² - c/a,
-so (x + b/2a)² = (b/2a)² - c/a, so (x + b/2a)² = b²/4a² - 4ac/4a²,
-so (x + b/2a)² = (b² - 4ac) / 4a², so x + b/2a = +- ²√(b² - 4ac) / ²√(4a²),
-so x = -b / 2a +- √(b² - 4ac) / 2a = [ -b +- √(b² - 4ac) ] / 2a.
-# Cubic formula proof:
-Given ax³ + bx² + cx + d = 0 and a =/= 0, we have the following:
-x³ + bx²/a + cx/a + d/a = 0
-# Quartic formula proof:
-Given ax⁴ + bx³ + cx² + dx + e = 0 and a =/= 0, we have the following:
-x⁴ + bx³/a + cx²/a + dx/a + e/a = 0
+so the quadratic residues mod 23 are 1, 2, 3, 4, 6, 8, 9, 12, 13
 # Counting on a chessboard (derived here: youtube.com/watch?v=DIsW_6u7jrA):
 rectangles = n² * (n+1)² / 4
 squares = n * (n+1) * (2n+1) / 6
