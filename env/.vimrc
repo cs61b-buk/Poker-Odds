@@ -92,5 +92,5 @@ cnoreabbrev X x
 cnoreabbrev Sh sh
 cnoreabbrev sH sh
 cnoreabbrev SH sh
-color default
+color morning
 set display=lastline
