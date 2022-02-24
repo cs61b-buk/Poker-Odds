@@ -1,3 +1,4 @@
+C:\ProgramData\Anaconda3\Scripts\activate.bat base & C:\ProgramData\Anaconda3\python.exe "C:\Users\David Colby\OneDrive\Documents\Tasks\Jobs\Work Samples\Coding Projects\Poker Odds\poker_odds.py" & pause
 # Drop your proofs here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
 # Quadratic formula proof:
