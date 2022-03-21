@@ -1,5 +1,7 @@
 # Drop your proofs here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
+# Linear formula proof:
+Given ax + b = 0 and a =/= 0, we have the following: x + b/a = 0, so x = - b/a.
 # Quadratic formula proof:
 Given ax² + bx + c = 0 and a =/= 0, we have the following:
 x² + bx/a + c/a = 0, so x² + bx/a + (b/2a)² + c/a = (b/2a)²,
@@ -8,11 +10,57 @@ so (x + b/2a)² = (b/2a)² - c/a, so (x + b/2a)² = b²/4a² - 4ac/4a²,
 so (x + b/2a)² = (b² - 4ac) / 4a², so x + b/2a = +- ²√(b² - 4ac) / ²√(4a²),
 so x = -b / 2a +- √(b² - 4ac) / 2a = [ -b +- √(b² - 4ac) ] / 2a.
 # Cubic formula proof:
-Given ax³ + bx² + cx + d = 0 and a =/= 0, we have the following:
-x³ + bx²/a + cx/a + d/a = 0
+*** See after the following quartic formula proof. ***
 # Quartic formula proof:
-Given ax⁴ + bx³ + cx² + dx + e = 0 and a =/= 0, we have the following:
-x⁴ + bx³/a + cx²/a + dx/a + e/a = 0
+Given ax⁴ + bx³ + cx² + dx + e = 0 = (Ax² + Bx + C)² - (Dx² + Ex + F)²,
+we have the following:
+(A²x⁴ + ABx³ + ACx² + ABx³ + B²x² + BCx + ACx² + BCx + C²) - 
+    (D²x⁴ + DEx³ + DFx² + DEx³ + E²x² + EFx + DFx² + EFx + F²) = 0, so
+(A²x⁴ + 2ABx³ + 2ACx² + B²x² + 2BCx + C²) - (D²x⁴ + 2DEx³ + 2DFx² + E²x² + 2EFx + F²) = 0,
+so A²x⁴ - D²x⁴ + 2ABx³ - 2DEx³ + 2ACx² + B²x² + ACx² - 2DFx² - E²x² 
+    + 2BCx - 2EFx + C² - F² = 0, so
+(A² - D²) * x⁴ + (2AB - 2DE) * x³ + (2AC + B² - 2DF - E²) * x² 
+    + (2BC - 2EF) * x + (C² - F²) = 0, so
+we now have the following 5 equations between our given constants and our new constants:
+a = A² - D²,  b = 2AB - 2DE,  c = 2AC - 2DF + B² - E²,  d = 2BC - 2EF,  and  e = C² - F².
+So, now we can solve them for our new constants, namely A, B, C, D, E, and F:
+a + D² = A²,  b + 2DE = 2AB,  c + 2DF = 2AC + B² - E²,  d + 2EF = 2BC,  and  e + F² = C²
+√(a+D²) = A,  (b+2DE)/(2A) = B,  2DF = 2AC + B² - E² - c,  2EF = 2BC - d,  and  √(e+F²) = C
+A=√(a+D²),  B=(b+2DE)/(2A),  D=(2AC+B²-E²-c)/(2F),  E=(2BC-d)/(2F),  and  C=√(e+F²)
+A=√(a+D²),  B=(b+2DE)/(2A),  C=√(e+F²),  D=(2AC+B²-E²-c)/(2F),  and  E=(2BC-d)/(2F)
+Right now, we have B and E in terms of each other, so let's plug in E into B:
+B = ( b + 2D [(2BC-d) / (2F)] )  /  (2A), and then solve for B:
+B = ( b + (D/F) * (2BC-d) )  /  (2A) = ( b + 2BCD/F - dD/F )  /  (2A)
+2AB = b + 2BCD/F - dD/F, so 2AB - 2BCD/F = b - dD/F, so B * (2A - 2CD/F) = b - dD/F,
+so B = (b - dD/F) / (2A - 2CD/F) = (bF - dD) / (2AF - 2CD), so now:
+A=√(a+D²),  B=(bF-dD)/(2AF-2CD),  C=√(e+F²),  D=(2AC+B²-E²-c)/(2F),  and  E=(2BC-d)/(2F),
+so now if we let F = 1, then we have the following:
+A=√(a+D²),  B=(b*1-dD)/(2A*1-2CD),  C=√(e+1²),  D=(2AC+B²-E²-c)/(2*1), and E=(2BC-d)/(2*1),
+so A=√(a+D²),  B=(b-dD)/(2A-2CD),  C=√(e+1),  D=(2AC+B²-E²-c)/2, and E=(2BC-d)/2.
+Now that we have our new constants in terms of our given constants, we have the following:
+(Ax² + Bx + C)² - (Dx² + Ex + F)² = 0
+(Ax² + Bx + C)² - (Dx² + Ex + 1)² = 0
+(Ax² + Bx + C)² = (Dx² + Ex + 1)²
+Ax² + Bx + C = +-(Dx² + Ex + 1)
+Ax² + Bx + C = +(Dx² + Ex + 1)   or   Ax² + Bx + C = -(Dx² + Ex + 1)
+Ax² + Bx + C - Dx² - Ex - 1 = 0   or   Ax² + Bx + C + Dx² + Ex + 1 = 0
+(A-D) * x² + (B-E) * x + (C-1) = 0   or   (A+D) * x² + (B+E) * x + (C+1) = 0.
+Using the quadratic formula, we now have the following:
+x = [ -(B-E) +- √( (B-E)² - 4*(A-D)*(C-1) ) ] / [ 2*(A-D) ]   or
+    x = [ -(B+E) +- √( (B+E)² - 4*(A+D)*(C+1) ) ] / [ 2*(A+D) ].
+# *** Cubic formula proof ***:
+Given ax³ + bx² + cx + d = 0 = `b`x³ + `c`x² + `d`x + `e` = 
+    0 + `b`x³ + `c`x² + `d`x + `e` = 0x⁴ + `b`x³ + `c`x² + `d`x + `e` = 
+    `a`x⁴ + `b`x³ + `c`x² + `d`x + `e` = (Ax² + Bx + C)² - (Dx² + Ex + F)²,
+a = 0, and b =/= 0, we have the following, as seen above, and more below:
+`a` = A²-D²,  `b` = 2AB-2DE,  `c` = 2AC - 2DF + B²- E²,  `d` = 2BC-2EF,  and  `e` = C²-F²,
+so, with F=1, A=√(`a`+D²), B=(`b`-`d`D)/(2A-2CD), C=√(`e`+1), D=(2AC+B²-E²-`c`)/2,
+and E=(2BC-`d`)/2, so, with `a`=0, so A=√(0+D²), `b`=a, `c`=b, `d`=c, and `e`=d, we have:
+A=√(D²), B=(a-cD)/(2A-2CD), C=√(d+1), D=(2AC+B²-E²-b)/2, and E=(2BC-c)/2
+Using the quadratic formula yet again, like last time, we now have the following:
+x = [ -(B-E) +- √( (B-E)² - 4*(A-D)*(C-1) ) ] / [ 2*(A-D) ]  or
+x = [ -(B+E) +- √( (B+E)² - 4*(A+D)*(C+1) ) ] / [ 2*(A+D) ],
+but this time we must be careful, since A-D or A+D is = to 0.
 # Absurdle:
 https://qntm.org/files/absurdle/absurdle.html
 # Find all quadratic residues mod 13, 16, 17, and 23:
