@@ -1,4 +1,4 @@
-# Drop your proofs here:
+# Drop your proofs and solutions here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
 # Linear formula proof:
 Given ax + b = 0 and a =/= 0, we have the following: x + b/a = 0, so x = - b/a.

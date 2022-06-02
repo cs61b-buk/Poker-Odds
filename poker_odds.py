@@ -24,31 +24,31 @@ def highCard(cards):
   sameNum = Odds.sameNums[-1] if Odds.sameNums else 0
   indexes=sorted([numbers.index(num) for num in [card[1] for card in cards]])
   isStraight = ( [index-indexes[0] for index in indexes] == [0,1,2,3,4] )
-  return 10**(-6) if (sameSuit == 5 or sameNum > 1 or isStraight) else 100
+  return zero if (sameSuit == 5 or sameNum > 1 or isStraight) else 100
 def pair(key, cards):
   sameNum = Odds.sameNums[-1] if Odds.sameNums else 0
-  return 100 if(sameNum==2) else (10**(-6) if(sameNum>2) else Odds.probs[key])
+  return 100 if(sameNum==2) else (zero if(sameNum>2) else Odds.probs[key])
 def twoPair(key, cards):
   sameNums = [0,0] if (Odds.sameNums == []) else Odds.sameNums[-2:]
-  return 100 if (sameNums == [2,2]) else (10**(-6) if \
+  return 100 if (sameNums == [2,2]) else (zero if \
           (sameNums[0] > 2 or sameNums[1] > 2) else Odds.probs[key])
 def threeOfAkind(key, cards):
   sameNum = Odds.sameNums[-1] if Odds.sameNums else 0
-  return 100 if(sameNum==3) else (10**(-6) if(sameNum>3) else Odds.probs[key])
+  return 100 if(sameNum==3) else (zero if(sameNum>3) else Odds.probs[key])
 def straight(key, cards):
   indexes=sorted([numbers.index(num) for num in [card[1] for card in cards]])
   isStraight = ( [index-indexes[0] for index in indexes] == [0,1,2,3,4] )
   sameSuit = Odds.sameSuits[-1] if Odds.sameSuits else 0
-  return 10**(-6) if(sameSuit==5)else (100 if isStraight else Odds.probs[key])
+  return zero if(sameSuit==5)else (100 if isStraight else Odds.probs[key])
 def flush(key, cards):
   indexes=sorted([numbers.index(num) for num in [card[1] for card in cards]])
   isStraight = ( [index-indexes[0] for index in indexes] == [0,1,2,3,4] )
   sameSuit = Odds.sameSuits[-1] if Odds.sameSuits else 0
-  return 10**(-6) if (sameSuit==5 and isStraight) else 100 \
+  return zero if (sameSuit==5 and isStraight) else 100 \
                                     if (sameSuit==5) else Odds.probs[key]
 def fullHouse(key, cards):
   sameNums = [0,0] if (Odds.sameNums == []) else Odds.sameNums[-2:]
-  return 100 if (sameNums == [2,3]) else (10**(-6) if \
+  return 100 if (sameNums == [2,3]) else (zero if \
           (sameNums[0] > 2 or sameNums[1] > 3) else Odds.probs[key])
 def fourOfAkind(key, cards):
   sameNum = Odds.sameNums[-1] if Odds.sameNums else 0
@@ -58,7 +58,7 @@ def straightFlush(key, cards):
   indexes=sorted([numbers.index(num) for num in [card[1] for card in cards]])
   isStraight = ( [index-indexes[0] for index in indexes] == [0,1,2,3,4] )
   sameSuit = Odds.sameSuits[-1] if Odds.sameSuits else 0; curr=Odds.probs[key]
-  return 10**(-6) if royal else 100 if (sameSuit==5 and isStraight) else curr
+  return zero if royal else 100 if (sameSuit==5 and isStraight) else curr
 def royalFlush(key, cards):
   royal="King"in[card[1]for card in cards]and"Ace"in[card[1]for card in cards]
   indexes=sorted([numbers.index(num) for num in [card[1] for card in cards]])
@@ -110,16 +110,16 @@ def start():
   (F);Odds.calculateAndPlot("Hole Cards:");addButton["text"]="Add Card";top(T)
 from tkinter import *; tot=51*50*49*48*47*46;win=Tk();import PyQt5; win.lift()
 action = Label(win,text=""); suits = ["Clubs", "Diamonds", "Spades", "Hearts"]
-i="C:\\Users\David Colby\OneDrive\Documents\Tasks\Setup\Windows Software"+\
-"\Poker Odds\Cards.ico";suit=StringVar();num=StringVar();win.option_add(\
+i = "C:\\Users\David Colby\OneDrive\Documents\Tasks\Setup\Windows Software"+\
+"\Poker and Math\Cards.ico";suit=StringVar();num=StringVar();win.option_add(\
 "*Font",('Verdana',30)); addButton = Button(win,text="Start Hole Cards",\
 command=start,fg="blue");win.iconbitmap(i);addButton.pack();action.pack()
 top(True);win.title("Poker Odds:"); numbers=["2","3","4","5","6","7",\
 "8","9","10","Jack","Queen","King","Ace"];endButton=Button(win,text=\
 "Quit",command=win.quit,fg="red");Odds=PokerOdds();suit.set(suits[0])
 import matplotlib, matplotlib.pyplot as plt; matplotlib.use("Qt5Agg")
-Label(win, text="Suit:", fg="blue").pack(); num.set(numbers[0])
-suitMenu=OptionMenu(win,suit,*suits); suitMenu.config(fg="green",\
+Label(win,text="Suit:",fg="blue").pack();num.set(numbers[0]);zero=10**(-6)
+suitMenu=OptionMenu(win,suit,*suits);suitMenu.config(fg="green",\
 activeforeground="black");suitMenu.pack();numMenu=OptionMenu(win,num,*numbers)
 numMenu["menu"].config(fg="green",activeforeground="black");suitMenu["menu"].\
 config(fg="green",activeforeground="black");numMenu.config(fg="green",\
