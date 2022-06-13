@@ -26,6 +26,9 @@ def highCard(cards):
   isStraight = ( [index-indexes[0] for index in indexes] == [0,1,2,3,4] )
   return zero if (sameSuit == 5 or sameNum > 1 or isStraight) else 100
 def pair(key, cards):
+  Odds.probs[key]=51*50*3*40*36*32/tot if len(Odds.cards)==3 else Odds.probs[key]
+  Odds.probs[key]=51*50*49*3*36*32/tot if len(Odds.cards)==4 else Odds.probs[key]
+  Odds.probs[key]=51*50*49*48*3*32/tot if len(Odds.cards)==5 else Odds.probs[key]
   sameNum = Odds.sameNums[-1] if Odds.sameNums else 0
   return 100 if(sameNum==2) else (zero if(sameNum>2) else Odds.probs[key])
 def twoPair(key, cards):
@@ -108,7 +111,7 @@ class PokerOdds:
 def start():
   updateActionTo("Please add 3 flop cards.");addButton["command"]=addCard;top\
   (F);Odds.calculateAndPlot("Hole Cards:");addButton["text"]="Add Card";top(T)
-from tkinter import *; tot=51*50*49*48*47*46;win=Tk();import PyQt5; win.lift()
+from tkinter import *; tot=51*50*49*48*47*46;win=Tk();win.lift();import PyQt5
 action = Label(win,text=""); suits = ["Clubs", "Diamonds", "Spades", "Hearts"]
 i = "C:\\Users\David Colby\OneDrive\Documents\Tasks\Setup\Windows Software"+\
 "\Poker and Math\Cards.ico";suit=StringVar();num=StringVar();win.option_add(\
