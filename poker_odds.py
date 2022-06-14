@@ -26,9 +26,9 @@ def highCard(cards):
   isStraight = ( [index-indexes[0] for index in indexes] == [0,1,2,3,4] )
   return zero if (sameSuit == 5 or sameNum > 1 or isStraight) else 100
 def pair(key, cards):
-  Odds.probs[key]=51*50*3*40*36*32/tot if len(Odds.cards)==3 else Odds.probs[key]
-  Odds.probs[key]=51*50*49*3*36*32/tot if len(Odds.cards)==4 else Odds.probs[key]
-  Odds.probs[key]=51*50*49*48*3*32/tot if len(Odds.cards)==5 else Odds.probs[key]
+  Odds.probs[key]=1836000*36*32/tot if len(Odds.cards)==3 else Odds.probs[key]
+  Odds.probs[key]=2550*36*28224/tot if len(Odds.cards)==4 else Odds.probs[key]
+  Odds.probs[key]=2550*48*28224/tot if len(Odds.cards)==5 else Odds.probs[key]
   sameNum = Odds.sameNums[-1] if Odds.sameNums else 0
   return 100 if(sameNum==2) else (zero if(sameNum>2) else Odds.probs[key])
 def twoPair(key, cards):
@@ -83,14 +83,14 @@ def pick(key, cards):
   if (key == "Total: "):    return total(cards)
 class PokerOdds:
   def __init__(self):
-    self.probs = { " 1. High Card: ": tot, " 2. Pair: ": 3 * 48 * 44 * \
-        40 * 36 * 32, " 3. Two (2) Pair: ": 3 * 48 * 3 * 44 * 40 * 36, \
-        " 4. Three (3) of a Kind: ": 6 * 48 * 44 * 40 * 36, " 5. St" + \
-        "raight: ": 8 * 16 * 16 * 25 * 32 * 28, " 6. Flush: ": 12 * 11 \
-        * 10 * 9 * 32 * 28, " 7. Full House: ": 3 * 2 * 48 * 3 * 44 * \
+    self.probs = { " 1. High Card: ": tot, " 2. Pair: ":  48 * 44 * 40 * \
+        36 * 32 * 18, " 3. Two (2) Pair: ": 48 * 44 * 40 * 36 * 15 * 12, \
+        " 4. Three (3) of a Kind: ": 48 * 44 * 40 * 36 * 15 * 2, " 5." + \
+        " Straight: ": 51 * 50 * 21.7 * 6 * 6 * 6, " 6. Flush: ": 51 * 50 \
+        * 12 * 11 * 10 * 9, " 7. Full House: ": 3 * 2 * 48 * 3 * 44 * \
         40, " 8. Four (4) of a Kind: ": 3 * 2 * 1 * 48 * 44 * 40, \
-        " 9. Straight Flush: ": 2 * 2 * 2 * 25 * 32 * 28, \
-        "10. Royal Flush: ": 24 * 32 * 28, "Total: ": tot }
+        " 9. Straight Flush: ": 51 * 50 * 2 * 2 * 2 * 2, \
+        "10. Royal Flush: ": 51 * 20 * 4 * 3 * 2 * 1, "Total: ": tot }
     self.probs.update((k, 100*v/tot) for k, v in self.probs.items())
     self.sameSuits=[]; self.sameNums=[]; self.cards=[]
   def calculateAndPlot(self, partOfRound):
