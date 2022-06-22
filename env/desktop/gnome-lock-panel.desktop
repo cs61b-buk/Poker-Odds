@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Screen Lock
-Comment=Lock your screen
+Name=Screen
+Comment=Screen Privacy Preferences
 Exec=gnome-control-center lock
 # FIXME
 # Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-Icon=system-lock-screen-symbolic
+Icon=video-display-symbolic
 Terminal=false
 Type=Application
 NoDisplay=true
@@ -14,7 +14,7 @@ OnlyShowIn=GNOME;Unity;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-control-center
 X-GNOME-Bugzilla-Component=privacy
-X-GNOME-Bugzilla-Version=40.0
+X-GNOME-Bugzilla-Version=41.7
 # Translators: Search terms to find the Privacy panel. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-Keywords=screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;
+Keywords=screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;network;identity;privacy;restrict;
 X-Ubuntu-Gettext-Domain=gnome-control-center-2.0

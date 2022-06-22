@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Editor
-Exec=/usr/bin/gedit
-Icon=org.gnome.gedit
-Terminal=false
-Type=Application
