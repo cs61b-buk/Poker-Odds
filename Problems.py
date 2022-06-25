@@ -1,5 +1,23 @@
 # Drop your proofs and solutions here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
+# Find all solutions:
+(a) 9x == 5 (mod 25)
+First, there is one (1) solution since gcd(9,25) = 1 and 1 | 5.
+Now we have the following to calculate via the Euclidean Algorithm:
+25 = 2*9 + 7,   9 = 1*7 + 2,   and   7 = 3*2 + 1,   so
+7 = 25 - 2*9,   2 = 9 - 1*7,   and   1 = 7 - 3*2,   so
+2 = 9 - 1*(25 - 2*9)   and   1 = (25 - 2*9) - 3*2,   so
+1 = (25 - 2*9) - 3*[9 - 1*(25 - 2*9)] = 25 - 2*9 - 3*9 + 3*(25 - 2*9)
+1 = 25 - 2*9 - 3*9 + 3*25 - 6*9 = 4*25 - 11*9, so 5 = 20*25 - 55*9
+so x == -55 (mod 25) == 20 (mod 25).
+(b) 987x == 610 (mod 1597)
+First, we have to calculate the gcd(987, 1597) via the Euclidean Algorithm:
+1597 = 1*987 + 610,  987 = 1*610 + 377,  610 = 1*377 + 233,  377 = 1*233 + 144,
+233 = 1*144 + 89,  144 = 1*89 + 55,  89 = 1*55 + 34,  55 = 1*34 + 21,  34 = 1*21 + 13,
+21 = 1*13 + 8,  13 = 1*8 + 5,  8 = 1*5 + 3,  5 = 1*3 + 2,  3 = 1*2 + 1,   2 = 2*1
+So, now we have that there is one (1) solution since gcd(987, 1597) = 1 and 1 | 610.
+Next, we can see that 987x == -987 == 1597-987 == 610 (mod 1597),
+so x must be == -1 == 1596 (mod 1597).
 # Linear formula proof:
 Given ax + b = 0 and a =/= 0, we have the following: x + b/a = 0, so x = - b/a.
 # Quadratic formula proof:
