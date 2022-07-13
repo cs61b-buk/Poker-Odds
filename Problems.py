@@ -1,8 +1,469 @@
 # Drop your proofs and solutions here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
+### Order Modulo n Warmups:
+# Find ord_10(7) and ord_25(9):
+ord_10(7) = N <===> 7^N = 1 (mod 10), so we list the powers of 7^n (mod 10):
+n = 1 ==> 7^n = 7^1 = 7 (mod 10)
+n = 2 ==> 7^n = 7^2 = 49 (mod 10) = 9 (mod 10)
+n = 3 ==> 7^n = 7^3 = 343 (mod 10) = 3 (mod 10)
+n = 4 ==> 7^n = 7^4 = 343*7 (mod 10) = 3*7 (mod 10) = 21 (mod 10) = 1 (mod 10)
+Therefore, N = ord_10(7) = 4.
+ord_25(9) = N <===> 9^N = 1 (mod 25), so we list the powers of 9^n (mod 25):
+n = 1 ==> 9^n = 9^1 = 9 (mod 25)
+n = 2 ==> 9^n = 9^2 = 81 (mod 25) = 6 (mod 25)
+n = 3 ==> 9^n = 9^3 = 6*9 (mod 25) = 54 (mod 25) = 4 (mod 25)
+n = 4 ==> 9^n = 9^4 = 4*9 (mod 25) = 36 (mod 25) = 11 (mod 25)
+n = 5 ==> 9^n = 9^5 = 11*9 (mod 25) = 99 (mod 25) = -1 (mod 25)
+n = 10 ==> 9^n = 9^10 = (9^5)^2 (mod 25) = (-1)^2 (mod 25) = 1 (mod 25)
+Therefore, N = ord_25(9) = 10.
+# Find all primitive roots mod 11, 13, and 17:
+2 is a primitive root mod 11 <===> ord_11(2) = phi(11) = 10 <===> 2^10 = 1 (mod 11),
+so we list the powers of 2^n (mod 11):
+n = 1 ==> 2^n = 2^1 = 2 (mod 11)
+n = 2 ==> 2^n = 2^2 = 4 (mod 11)
+n = 3 ==> 2^n = 2^3 = 8 (mod 11)
+n = 4 ==> 2^n = 2^4 = 16 = 5 (mod 11)
+n = 5 ==> 2^n = 2^5 = 32 = -1 (mod 11)
+n = 10 ==> 2^n = 2^10 = (2^5)^2 = (-1)^2 = 1 (mod 11)
+Therefore, N = ord_11(2) = 10, so 2 is a primitive root mod 11.
+3 is a primitive root mod 11 <===> ord_11(3) = phi(11) = 10 <===> 3^10 = 1 (mod 11),
+so we list the powers of 3^n (mod 11):
+n = 1 ==> 3^n = 3^1 = 3 (mod 11)
+n = 2 ==> 3^n = 3^2 = 9 (mod 11)
+n = 3 ==> 3^n = 3^3 = 27 = 5 (mod 11)
+n = 4 ==> 3^n = 3^4 = 5*3 = 15 = 4 (mod 11)
+n = 5 ==> 3^n = 3^5 = 4*3 = 12 = 1 (mod 11)
+Therefore, N = ord_11(3) = 5, so 3 is NOT a primitive root mod 11.
+4 is a primitive root mod 11 <===> ord_11(4) = phi(11) = 10 <===> 4^10 = 1 (mod 11),
+so we list the powers of 4^n (mod 11):
+n = 1 ==> 4^n = 4^1 = 4 (mod 11)
+n = 2 ==> 4^n = 4^2 = 16 = 5 (mod 11)
+n = 3 ==> 4^n = 4^3 = 64 = 9 (mod 11)
+n = 4 ==> 4^n = 4^4 = 9*4 = 36 = 3 (mod 11)
+n = 5 ==> 4^n = 4^5 = 3*4 = 12 = 1 (mod 11)
+Therefore, N = ord_11(4) = 5, so 4 is NOT a primitive root mod 11.
+5 is a primitive root mod 11 <===> ord_11(5) = phi(11) = 10 <===> 5^10 = 1 (mod 11),
+so we list the powers of 5^n (mod 11):
+n = 1 ==> 5^n = 5^1 = 5 (mod 11)
+n = 2 ==> 5^n = 5^2 = 25 = 3 (mod 11)
+n = 3 ==> 5^n = 5^3 = 3*5 = 15 = 4 (mod 11)
+n = 4 ==> 5^n = 5^4 = 4*5 = 20 = 9 (mod 11)
+n = 5 ==> 5^n = 5^5 = 9*5 = 45 = 1 (mod 11)
+Therefore, N = ord_11(5) = 5, so 5 is NOT a primitive root mod 11.
+6 is a primitive root mod 11 <===> ord_11(6) = phi(11) = 10 <===> 6^10 = 1 (mod 11),
+so we list the powers of 6^n (mod 11):
+n = 1 ==> 6^n = 6^1 = 6 (mod 11)
+n = 2 ==> 6^n = 6^2 = 36 = 3 (mod 11)
+n = 3 ==> 6^n = 6^3 = 3*6 = 18 = 7 (mod 11)
+n = 4 ==> 6^n = 6^4 = 7*6 = 42 = 9 (mod 11)
+n = 5 ==> 6^n = 6^5 = 9*6 = 54 = -1 (mod 11)
+n = 10 ==> 6^n = 6^10 = (6^5)^2 = (-1)^2 = 1 (mod 11)
+Therefore, N = ord_11(6) = 10, so 6 is a primitive root mod 11.
+7 is a primitive root mod 11 <===> ord_11(7) = phi(11) = 10 <===> 7^10 = 1 (mod 11),
+so we list the powers of 7^n (mod 11):
+n = 1 ==> 7^n = 7^1 = 7 (mod 11)
+n = 2 ==> 7^n = 7^2 = 49 = 5 (mod 11)
+n = 3 ==> 7^n = 7^3 = 5*7 = 35 = 2 (mod 11)
+n = 4 ==> 7^n = 7^4 = 2*7 = 14 = 3 (mod 11)
+n = 5 ==> 7^n = 7^5 = 3*7 = 21 = -1 (mod 11)
+n = 10 ==> 7^n = 7^10 = (7^5)^2 = (-1)^2 = 1 (mod 11)
+Therefore, N = ord_11(7) = 10, so 7 is a primitive root mod 11.
+8 is a primitive root mod 11 <===> ord_11(8) = phi(11) = 10 <===> 8^10 = 1 (mod 11),
+so we list the powers of 8^n (mod 11):
+n = 1 ==> 8^n = 8^1 = 8 (mod 11)
+n = 2 ==> 8^n = 8^2 = 64 = 9 (mod 11)
+n = 3 ==> 8^n = 8^3 = 9*8 = 72 = 6 (mod 11)
+n = 4 ==> 8^n = 8^4 = 6*8 = 48 = 4 (mod 11)
+n = 5 ==> 8^n = 8^5 = 4*8 = 32 = -1 (mod 11)
+n = 10 ==> 8^n = 8^10 = (8^5)^2 = (-1)^2 = 1 (mod 11)
+Therefore, N = ord_11(8) = 10, so 8 is a primitive root mod 11.
+9 is a primitive root mod 11 <===> ord_11(9) = phi(11) = 10 <===> 9^10 = 1 (mod 11),
+so we list the powers of 9^n (mod 11):
+n = 1 ==> 9^n = 9^1 = 9 (mod 11)
+n = 2 ==> 9^n = 9^2 = 81 = 4 (mod 11)
+n = 3 ==> 9^n = 9^3 = 4*9 = 36 = 3 (mod 11)
+n = 4 ==> 9^n = 9^4 = 3*9 = 27 = 5 (mod 11)
+n = 5 ==> 9^n = 9^5 = 5*9 = 45 = 1 (mod 11)
+Therefore, N = ord_11(9) = 5, so 9 is NOT a primitive root mod 11.
+10 is a primitive root mod 11 <===> ord_11(10) = phi(11) = 10 <===> 10^10 = 1 (mod 11),
+so we list the powers of 10^n (mod 11):
+n = 1 ==> 10^n = 10^1 = 10 (mod 11)
+n = 2 ==> 10^n = 10^2 = 100 = 1 (mod 11)
+Therefore, N = ord_11(10) = 2, so 10 is NOT a primitive root mod 11.
+So, all of the primitive roots mod 11 are in the following set: {2, 6, 7, 8}.
+2 is a primitive root mod 13 <===> ord_13(2) = phi(13) = 12 <===> 2^12 = 1 (mod 13),
+so we list the powers of 2^n (mod 13):
+n = 1 ==> 2^n = 2^1 = 2 (mod 13)
+n = 2 ==> 2^n = 2^2 = 4 (mod 13)
+n = 3 ==> 2^n = 2^3 = 8 (mod 13)
+n = 4 ==> 2^n = 2^4 = 16 = 3 (mod 13)
+n = 5 ==> 2^n = 2^5 = 3*2 = 6 (mod 13)
+n = 6 ==> 2^n = 2^6 = 6*2 = 12 = -1 (mod 13)
+n = 12 ==> 2^n = 2^12 = (2^6)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(2) = 12, so 2 is a primitive root mod 13.
+3 is a primitive root mod 13 <===> ord_13(3) = phi(13) = 12 <===> 3^12 = 1 (mod 13),
+so we list the powers of 3^n (mod 13):
+n = 1 ==> 3^n = 3^1 = 3 (mod 13)
+n = 2 ==> 3^n = 3^2 = 9 (mod 13)
+n = 3 ==> 3^n = 3^3 = 27 = 1 (mod 13)
+Therefore, N = ord_13(3) = 3, so 3 is NOT a primitive root mod 13.
+4 is a primitive root mod 13 <===> ord_13(4) = phi(13) = 12 <===> 4^12 = 1 (mod 13),
+so we list the powers of 4^n (mod 13):
+n = 1 ==> 4^n = 4^1 = 4 (mod 13)
+n = 2 ==> 4^n = 4^2 = 16 = 3 (mod 13)
+n = 3 ==> 4^n = 4^3 = 64 = -1 (mod 13)
+n = 6 ==> 4^n = 4^6 = (4^3)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(4) = 6, so 4 is NOT a primitive root mod 13.
+5 is a primitive root mod 13 <===> ord_13(5) = phi(13) = 12 <===> 5^12 = 1 (mod 13),
+so we list the powers of 5^n (mod 13):
+n = 1 ==> 5^n = 5^1 = 5 (mod 13)
+n = 2 ==> 5^n = 5^2 = 25 = -1 (mod 13)
+n = 4 ==> 5^n = 5^4 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(5) = 4, so 5 is NOT a primitive root mod 13.
+6 is a primitive root mod 13 <===> ord_13(6) = phi(13) = 12 <===> 6^12 = 1 (mod 13),
+so we list the powers of 6^n (mod 13):
+n = 1 ==> 6^n = 6^1 = 6 (mod 13)
+n = 2 ==> 6^n = 6^2 = 36 = 10 (mod 13)
+n = 3 ==> 6^n = 6^3 = 10*6 = 60 = 8 (mod 13)
+n = 4 ==> 6^n = 6^4 = 8*6 = 48 = 9 (mod 13)
+n = 5 ==> 6^n = 6^5 = 9*6 = 54 = 2 (mod 13)
+n = 6 ==> 6^n = 6^6 = 2*6 = 12 = -1 (mod 13)
+n = 12 ==> 6^n = 6^12 = (6^6)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(6) = 12, so 6 is a primitive root mod 13.
+7 is a primitive root mod 13 <===> ord_13(7) = phi(13) = 12 <===> 7^12 = 1 (mod 13),
+so we list the powers of 7^n (mod 13):
+n = 1 ==> 7^n = 7^1 = 7 (mod 13)
+n = 2 ==> 7^n = 7^2 = 49 = 10 (mod 13)
+n = 3 ==> 7^n = 7^3 = 10*7 = 70 = 5 (mod 13)
+n = 4 ==> 7^n = 7^4 = 5*7 = 35 = 9 (mod 13)
+n = 5 ==> 7^n = 7^5 = 9*7 = 63 = 11 (mod 13)
+n = 6 ==> 7^n = 7^6 = 11*7 = 77 = -1 (mod 13)
+n = 12 ==> 7^n = 7^12 = (7^6)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(7) = 10, so 7 is a primitive root mod 13.
+8 is a primitive root mod 13 <===> ord_13(8) = phi(13) = 12 <===> 8^12 = 1 (mod 13),
+so we list the powers of 8^n (mod 13):
+n = 1 ==> 8^n = 8^1 = 8 (mod 13)
+n = 2 ==> 8^n = 8^2 = 64 = -1 (mod 13)
+n = 4 ==> 8^n = 8^4 = (8^2)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(8) = 4, so 8 is NOT a primitive root mod 13.
+9 is a primitive root mod 13 <===> ord_13(9) = phi(13) = 12 <===> 9^12 = 1 (mod 13),
+so we list the powers of 9^n (mod 13):
+n = 1 ==> 9^n = 9^1 = 9 (mod 13)
+n = 2 ==> 9^n = 9^2 = 81 = 3 (mod 13)
+n = 3 ==> 9^n = 9^3 = 3*9 = 27 = 1 (mod 13)
+Therefore, N = ord_13(9) = 3, so 9 is NOT a primitive root mod 13.
+10 is a primitive root mod 13 <===> ord_13(10) = phi(13) = 12 <===> 10^12 = 1 (mod 13),
+so we list the powers of 10^n (mod 13):
+n = 1 ==> 10^n = 10^1 = 10 (mod 13)
+n = 2 ==> 10^n = 10^2 = 100 = 9 (mod 13)
+n = 3 ==> 10^n = 10^3 = 9*10 = 90 = -1 (mod 13)
+n = 6 ==> 10^n = 10^6 = (10^3)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(10) = 6, so 10 is NOT a primitive root mod 13.
+11 is a primitive root mod 13 <===> ord_13(11) = phi(13) = 12 <===> 11^12 = 1 (mod 13),
+so we list the powers of 11^n (mod 13):
+n = 1 ==> 11^n = 11^1 = 11 (mod 13)
+n = 2 ==> 11^n = 11^2 = 121 = 4 (mod 13)
+n = 3 ==> 11^n = 11^3 = 4*11 = 44 = 5 (mod 13)
+n = 4 ==> 11^n = 11^4 = 5*11 = 55 = 3 (mod 13)
+n = 5 ==> 11^n = 11^5 = 3*11 = 33 = 7 (mod 13)
+n = 6 ==> 11^n = 11^6 = 7*11 = 77 = -1 (mod 13)
+n = 12 ==> 11^n = 11^12 = (11^6)^2 = (-1)^2 = 1 (mod 13)
+Therefore, N = ord_13(11) = 12, so 11 is a primitive root mod 13.
+12 is a primitive root mod 13 <===> ord_13(12) = phi(13) = 12 <===> 12^12 = 1 (mod 13),
+so we list the powers of 12^n (mod 13):
+n = 1 ==> 12^n = 12^1 = 12 (mod 13)
+n = 2 ==> 12^n = 12^2 = 144 = 14 = 1 (mod 13)
+Therefore, N = ord_13(12) = 2, so 12 is NOT a primitive root mod 13.
+So, all of the primitive roots mod 13 are in the following set: {2, 6, 7, 11}.
+2 is a primitive root mod 17 <===> ord_17(2) = phi(17) = 16 <===> 2^16 = 1 (mod 17),
+so we list the powers of 2^n (mod 17):
+n = 1 ==> 2^n = 2^1 = 2 (mod 17)
+n = 2 ==> 2^n = 2^2 = 4 (mod 17)
+n = 4 ==> 2^n = 2^4 = 16 = -1 (mod 17)
+n = 8 ==> 2^n = 2^8 = (2^4)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(2) = 4, so 2 is NOT a primitive root mod 17.
+3 is a primitive root mod 17 <===> ord_17(3) = phi(17) = 16 <===> 3^16 = 1 (mod 17),
+so we list the powers of 3^n (mod 17):
+n = 1 ==> 3^n = 3^1 = 3 (mod 17)
+n = 2 ==> 3^n = 3^2 = 9 (mod 17)
+n = 3 ==> 3^n = 3^3 = 27 = 10 (mod 17)
+n = 4 ==> 3^n = 3^4 = 10*3 = 30 = 13 (mod 17)
+n = 8 ==> 3^n = 3^8 = (3^4)^2 = 13^2 = 169 = -1 (mod 17)
+n = 16 ==> 3^n = 3^16 = (3^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(3) = 16, so 3 is a primitive root mod 17.
+4 is a primitive root mod 17 <===> ord_17(4) = phi(17) = 16 <===> 4^16 = 1 (mod 17),
+so we list the powers of 4^n (mod 17):
+n = 1 ==> 4^n = 4^1 = 4 (mod 17)
+n = 2 ==> 4^n = 4^2 = 16 = -1 (mod 17)
+n = 4 ==> 4^n = 4^4 = (4^2)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(4) = 4, so 4 is NOT a primitive root mod 17.
+5 is a primitive root mod 17 <===> ord_17(5) = phi(17) = 16 <===> 5^16 = 1 (mod 17),
+so we list the powers of 5^n (mod 17):
+n = 1 ==> 5^n = 5^1 = 5 (mod 17)
+n = 2 ==> 5^n = 5^2 = 25 = 8 (mod 17)
+n = 4 ==> 5^n = 5^4 = (5^2)^2 = 8^2 = 64 = 13 (mod 17)
+n = 8 ==> 5^n = 5^8 = (5^4)^2 = 13^2 = 169 = -1 (mod 17)
+n = 16 ==> 5^n = 5^16 = (5^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(5) = 16, so 5 is a primitive root mod 17.
+6 is a primitive root mod 17 <===> ord_17(6) = phi(17) = 16 <===> 6^16 = 1 (mod 17),
+so we list the powers of 6^n (mod 17):
+n = 1 ==> 6^n = 6^1 = 6 (mod 17)
+n = 2 ==> 6^n = 6^2 = 36 = 2 (mod 17)
+n = 3 ==> 6^n = 6^3 = 2*6 = 12 = -5 (mod 17)
+n = 4 ==> 6^n = 6^4 = -5*6 = -30 = 4 (mod 17)
+n = 8 ==> 6^n = 6^8 = (6^4)^2 = 4^2 = 16 = -1 (mod 17)
+n = 16 ==> 6^n = 6^16 = (6^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(6) = 16, so 6 is a primitive root mod 17.
+7 is a primitive root mod 17 <===> ord_17(7) = phi(17) = 16 <===> 7^16 = 1 (mod 17),
+so we list the powers of 7^n (mod 17):
+n = 1 ==> 7^n = 7^1 = 7 (mod 17)
+n = 2 ==> 7^n = 7^2 = 49 = -2 (mod 17)
+n = 3 ==> 7^n = 7^3 = -2*7 = -14 = 3 (mod 17)
+n = 4 ==> 7^n = 7^4 = 3*7 = 21 = 4 (mod 17)
+n = 8 ==> 7^n = 7^8 = (7^4)^2 = 4^2 = 16 = -1 (mod 17)
+n = 16 ==> 7^n = 7^16 = (7^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(7) = 16, so 7 is a primitive root mod 17.
+8 is a primitive root mod 17 <===> ord_17(8) = phi(17) = 16 <===> 8^16 = 1 (mod 17),
+so we list the powers of 8^n (mod 17):
+n = 1 ==> 8^n = 8^1 = 8 (mod 17)
+n = 2 ==> 8^n = 8^2 = 64 = -4 (mod 17)
+n = 4 ==> 8^n = 8^4 = (8^2)^2 = (-4)^2 = 16 = -1 (mod 17)
+n = 8 ==> 8^n = 8^8 = (8^4)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(8) = 8, so 8 is NOT a primitive root mod 17.
+9 is a primitive root mod 17 <===> ord_17(9) = phi(17) = 16 <===> 9^16 = 1 (mod 17),
+so we list the powers of 9^n (mod 17):
+n = 1 ==> 9^n = 9^1 = 9 (mod 17)
+n = 2 ==> 9^n = 9^2 = 81 = -4 (mod 17)
+n = 4 ==> 9^n = 9^4 = (9^2)^2 = (-4)^2 = 16 = -1 (mod 17)
+n = 8 ==> 9^n = 9^8 = (9^4)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(9) = 8, so 9 is NOT a primitive root mod 17.
+10 is a primitive root mod 17 <===> ord_17(10) = phi(17) = 16 <===> 10^16 = 1 (mod 17),
+so we list the powers of 10^n (mod 17):
+n = 1 ==> 10^n = 10^1 = 10 (mod 17)
+n = 2 ==> 10^n = 10^2 = 100 = 15 = -2 (mod 17)
+n = 4 ==> 10^n = 10^4 = (10^2)^2 = (-2)^2 = 4 (mod 17)
+n = 8 ==> 10^n = 10^8 = (10^4)^2 = 4^2 = 16 = -1 (mod 17)
+n = 16 ==> 10^n = 10^16 = (10^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(10) = 16, so 10 is a primitive root mod 17.
+11 is a primitive root mod 17 <===> ord_17(11) = phi(17) = 16 <===> 11^16 = 1 (mod 17),
+so we list the powers of 11^n (mod 17):
+n = 1 ==> 11^n = 11^1 = 11 = -6 (mod 17)
+n = 2 ==> 11^n = 11^2 = -6*11 = -66 = 2 (mod 17)
+n = 3 ==> 11^n = 11^3 = 2*11 = 22 = 5 (mod 17)
+n = 4 ==> 11^n = 11^4 = 5*11 = 55 = 4 (mod 17)
+n = 8 ==> 11^n = 11^8 = (11^4)^2 = 4^2 = 16 = -1 (mod 17)
+n = 16 ==> 11^n = 11^16 = (11^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(11) = 16, so 11 is a primitive root mod 17.
+12 is a primitive root mod 17 <===> ord_17(12) = phi(17) = 16 <===> 12^16 = 1 (mod 17),
+so we list the powers of 12^n (mod 17):
+n = 1 ==> 12^n = 12^1 = 12 = -5 (mod 17)
+n = 2 ==> 12^n = 12^2 = -5*12 = -60 = 8 (mod 17)
+n = 3 ==> 12^n = 12^3 = 8*12 = 96 = 11 = -6 (mod 17)
+n = 4 ==> 12^n = 12^4 = -6*12 = -72 = -4 (mod 17)
+n = 8 ==> 12^n = 12^8 = (12^4)^2 = (-4)^2 = 16 = -1 (mod 17)
+n = 16 ==> 12^n = 12^16 = (12^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(12) = 16, so 12 is a primitive root mod 17.
+13 is a primitive root mod 17 <===> ord_17(13) = phi(17) = 16 <===> 13^16 = 1 (mod 17),
+so we list the powers of 13^n (mod 17):
+n = 1 ==> 13^n = 13^1 = 13 = -4 (mod 17)
+n = 2 ==> 13^n = 13^2 = (13^1)^2 = (-4)^2 = 16 = -1 (mod 17)
+n = 4 ==> 13^n = 13^4 = (13^2)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(13) = 4, so 13 is NOT a primitive root mod 17.
+14 is a primitive root mod 17 <===> ord_17(14) = phi(17) = 16 <===> 14^16 = 1 (mod 17),
+so we list the powers of 14^n (mod 17):
+n = 1 ==> 14^n = 14^1 = 14 = -3 (mod 17)
+n = 2 ==> 14^n = 14^2 = (14^1)^2 = (-3)^2 = 9 (mod 17)
+n = 4 ==> 14^n = 14^4 = (14^2)^2 = 9^2 = 81 = -4 (mod 17)
+n = 8 ==> 14^n = 14^8 = (14^4)^2 = (-4)^2 = 16 = -1 (mod 17)
+n = 16 ==> 14^n = 14^16 = (14^8)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(14) = 16, so 14 is a primitive root mod 17.
+15 is a primitive root mod 17 <===> ord_17(15) = phi(17) = 16 <===> 15^16 = 1 (mod 17),
+so we list the powers of 15^n (mod 17):
+n = 1 ==> 15^n = 15^1 = 15 = -2 (mod 17)
+n = 2 ==> 15^n = 15^2 = (15^1)^2 = (-2)^2 = 4 (mod 17)
+n = 4 ==> 15^n = 15^4 = (15^2)^2 = 4^2 = 16 = -1 (mod 17)
+n = 8 ==> 15^n = 15^8 = (15^4)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(15) = 8, so 15 is NOT a primitive root mod 17.
+16 is a primitive root mod 17 <===> ord_17(16) = phi(17) = 16 <===> 16^16 = 1 (mod 17),
+so we list the powers of 16^n (mod 17):
+n = 1 ==> 16^n = 16^1 = 16 = -1 (mod 17)
+n = 2 ==> 16^n = 16^2 = (16^1)^2 = (-1)^2 = 1 (mod 17)
+Therefore, N = ord_17(13) = 2, so 16 is NOT a primitive root mod 17.
+So, all of the primitive roots mod 17 are in the following set: {3,5,6,7,10,11,12,14}.
+# Show that there are no primitive roots mod 8 nor 15:
+3 is a primitive root mod 8 <===> ord_8(3) = phi(8) = 4 <===> 3^4 = 1 (mod 8),
+so we list the powers of 3^n (mod 8):
+n = 1 ==> 3^n = 3^1 = 3 (mod 8)
+n = 2 ==> 3^n = 3^2 = 9 = 1 (mod 8)
+Therefore, N = ord_8(3) = 2, so 3 is NOT a primitive root mod 8.
+5 is a primitive root mod 8 <===> ord_8(5) = phi(8) = 4 <===> 5^4 = 1 (mod 8),
+so we list the powers of 5^n (mod 8):
+n = 1 ==> 5^n = 5^1 = 5 (mod 8)
+n = 2 ==> 5^n = 5^2 = 25 = 1 (mod 8)
+Therefore, N = ord_8(5) = 2, so 5 is NOT a primitive root mod 8.
+7 is a primitive root mod 8 <===> ord_8(7) = phi(8) = 4 <===> 7^4 = 1 (mod 8),
+so we list the powers of 7^n (mod 8):
+n = 1 ==> 7^n = 7^1 = 7 (mod 8)
+n = 2 ==> 7^n = 7^2 = 49 = 1 (mod 8)
+Therefore, N = ord_8(7) = 2, so 7 is NOT a primitive root mod 8.
+So, there are no primitive roots mod 8.
+2 is a primitive root mod 15 <===> ord_15(2) = phi(15) = 8 <===> 2^8 = 1 (mod 15),
+so we list the powers of 2^n (mod 15):
+n = 1 ==> 2^n = 2^1 = 2 (mod 15)
+n = 2 ==> 2^n = 2^2 = 4 (mod 15)
+n = 3 ==> 2^n = 2^3 = 8 (mod 15)
+n = 4 ==> 2^n = 2^4 = 16 = 1 (mod 15)
+Therefore, N = ord_15(3) = 4, so 2 is NOT a primitive root mod 15.
+4 is a primitive root mod 15 <===> ord_15(4) = phi(15) = 8 <===> 4^8 = 1 (mod 15),
+so we list the powers of 4^n (mod 15):
+n = 1 ==> 4^n = 4^1 = 4 (mod 15)
+n = 2 ==> 4^n = 4^2 = 16 = 1 (mod 15)
+Therefore, N = ord_15(4) = 2, so 4 is NOT a primitive root mod 15.
+7 is a primitive root mod 15 <===> ord_15(7) = phi(15) = 8 <===> 7^8 = 1 (mod 15),
+so we list the powers of 7^n (mod 15):
+n = 1 ==> 7^n = 7^1 = 7 (mod 15)
+n = 2 ==> 7^n = 7^2 = 49 = 4 (mod 15)
+n = 3 ==> 7^n = 7^3 = 4*7 = 28 = -2 (mod 15)
+n = 4 ==> 7^n = 7^4 = -2*7 = -14 = 1 (mod 15)
+Therefore, N = ord_15(7) = 4, so 7 is NOT a primitive root mod 15.
+8 is a primitive root mod 15 <===> ord_15(8) = phi(15) = 8 <===> 8^8 = 1 (mod 15),
+so we list the powers of 8^n (mod 15):
+n = 1 ==> 8^n = 8^1 = 8 (mod 15)
+n = 2 ==> 8^n = 8^2 = 64 = 4 (mod 15)
+n = 3 ==> 8^n = 8^3 = 4*8 = 32 = 2 (mod 15)
+n = 4 ==> 8^n = 8^4 = 2*8 = 16 = 1 (mod 15)
+Therefore, N = ord_15(8) = 4, so 8 is NOT a primitive root mod 15.
+11 is a primitive root mod 15 <===> ord_15(11) = phi(15) = 8 <===> 11^8 = 1 (mod 15),
+so we list the powers of 11^n (mod 15):
+n = 1 ==> 11^n = 11^1 = 11 (mod 15)
+n = 2 ==> 11^n = 11^2 = 121 = 1 (mod 15)
+Therefore, N = ord_15(11) = 2, so 11 is NOT a primitive root mod 15.
+13 is a primitive root mod 15 <===> ord_15(13) = phi(15) = 8 <===> 13^8 = 1 (mod 15),
+so we list the powers of 13^n (mod 15):
+n = 1 ==> 13^n = 13^1 = 13 (mod 15)
+n = 2 ==> 13^n = 13^2 = 169 = 4 (mod 15)
+n = 3 ==> 13^n = 13^3 = 4*13 = 52 = 7 (mod 15)
+n = 4 ==> 13^n = 13^4 = 7*13 = 91 = 1 (mod 15)
+Therefore, N = ord_15(13) = 4, so 13 is NOT a primitive root mod 15.
+14 is a primitive root mod 15 <===> ord_15(14) = phi(15) = 8 <===> 14^8 = 1 (mod 15),
+so we list the powers of 14^n (mod 15):
+n = 1 ==> 14^n = 14^1 = 14 (mod 15)
+n = 2 ==> 14^n = 14^2 = 196 = 46 = 1 (mod 15)
+Therefore, N = ord_15(14) = 2, so 14 is NOT a primitive root mod 15.
+So, there are no primitive roots mod 15.
+# Wilson's Theorem Warmups:
+1! (mod 2) = 1 (mod 2) = -1 (mod 2)
+2! (mod 3) = 2*1 (mod 3) = 2 (mod 3) = -1 (mod 3)
+17 * [1,2,3,4,5,6,7,8,9,10] = [17,34,51,68,85,102,119,136,153,170]
+16! (mod 17) = 1*2*3*4*5*6*7*8*9*10*11*12*13*14*15*16 (mod 17) 
+    = 1*(2*9)*(3*6)*(4*13)*(5*7)*(8*15)*(10*12)*(11*14)*16 (mod 17)
+    = 1*18*18*52*35*120*120*154*-1 (mod 17) = 1*1*1*1*1*1*1*1*-1 (mod 17) = -1 (mod 17)
+14! (mod 15) = 1*2*3*4*5*6*7*8*9*10*11*12*13*14 (mod 15)
+    = (1*3*5) * (2*4*6*7*8*9*10*11*12*13*14) (mod 15)
+    = (15) * (2*4*6*7*8*9*10*11*12*13*14) (mod 15) = 0 (mod 15) =/= -1 (mod 15)
+Show that 2*(p-3)! = -1 (mod p) is true for all primes p:
+2*(p-3)! (mod p) = 2*(p-1)!*(p-2)⁻¹*(p-1)⁻¹ (mod p) = 2*(-1)*(p-2)⁻¹*(p-1)⁻¹ (mod p)
+    = (-1)*(-2)*(p-1)*(p-2)⁻¹*(p-1)⁻¹ (mod p) = (-1)*(p-2)*(p-2)⁻¹ (mod p) = -1 (mod p)
+### Primitive Roots Modulo n Warmups:
+# Which has a primitive root out of {4,8,9,10,12,16,22,27,28,31,33}?:
+n has a primitive root <==> n = 1, 2, 4, p^k, or 2*p^k for some odd prime p and k in N
+so {4, 9, 22, 27, 31} have primitive roots and {8, 10, 12, 16, 28, 33} don't have P.R.s.
+# Find a primitive root mod 9 = 3^2, 25 = 5^2, and 18 = 2*3^2:
+2 is a primitive root mod 3 <==> ord_3(2) = phi(3) = 2 <==> 2^1 =/= 1 (mod 3) ==> yes
+    since 2 is a primitive root mod 3, then a primitive root mod 9 = 3^2 is 2 + 1*3 = 5
+5 is a primitive root mod 9 <==> ord_9(5) = phi(9) = 6 <==> 5^2 == -2 =/= 1 (mod 9) and 
+    5^3 == -2 * 5 == -10 == -1 =/= 1 (mod 9) ==> yes
+2 is a primitive root mod 5 <==> ord_5(2) = phi(5) = 4 <==> 2^2 = -1 =/= 1 (mod 5) ==> yes
+    since 2 is a primitive root mod 5, then a primitive root mod 25 = 5^2 is 2 + 2*5 = 12
+12 is a primitive root mod 25 <==> ord_25(12) = phi(25) = 20 <==> 12^2 == 144 == -6 =/= 1
+    (mod 25) and 12^5 == 12^2 * 12^2 * 12 == -6 * -6 * 12 == -6 * -72 == -6 * 3 == -18
+    == 7 =/= 1 (mod 25) ==> yes
+since 5 is a primitive root mod 9, then a primitive root mod 18 = 2 * 3^2 is 5
+5 is a primitive root mod 18 <==> ord_18(5) = phi(18) = 6 <==> 5^2 == 25 == 7 =/= 1 
+    (mod 18) and 5^3 == 7 * 5 == 35 == -1 =/= 1 (mod 18) ==> yes
+# Prove that ax² + bx + c = 0 and cy² + by + a = 0 have reciprocal roots:
+Given ax² + bx + c = 0, a =/= 0, and c =/= 0 we have x = [ -b +- √(b² - 4ac) ] / 2a,
+and given cy² + by + a = 0, c =/= 0, and a =/= 0 we have y = [ -b +- √(b² - 4ca) ] / 2c,
+so now we have the following:
+y = { [ -b +- √(b² - 4ca) ][ -b -+ √(b² - 4ca) ] } / { 2c [ -b -+ √(b² - 4ca) ] }
+y = { [-b]² - [√(b² - 4ca)]² } / { 2c [ -b +- √(b² - 4ac) ] }
+y = { b² - (b² - 4ca) } / { 2c [ -b +- √(b² - 4ac) ] }
+y = { b² - b² + 4ca } / { 2c [ -b +- √(b² - 4ac) ] }
+y = { 4ca } / { 2c [ -b +- √(b² - 4ac) ] } = 2a / [ -b +- √(b² - 4ac) ] = 1/x.
+# Prove the cubic formula:
+Given ax³ + bx² + cx + d = 0 and a =/= 0, we have the following:
+x³ + bx²/a + cx/a + d/a = 0, so x³ + 3(b/3a)x² + 3(b/3a)²x + cx/a + d/a = 3(b/3a)²x,
+so x³ + 3(b/3a)x² + 3(b/3a)²x + (b/3a)³ + cx/a + d/a = 3(b/3a)²x + (b/3a)³,
+so (x + b/3a)³ + cx/a + c(b/3a)/a + d/a = (b/3a)² (3x + b/3a) + c(b/3a)/a,
+so (x+b/3a)³+(c/a)(x+b/3a)+d/a+(b/3a)²(2b/3a)=(b/3a)²(3x+b/3a)+(b/3a)²(2b/3a)+(c/a)(b/3a),
+so (x+b/3a)³+(c/a)(x+b/3a)+d/a+(b/3a)²(2b/3a)=(b/3a)²(3x+3b/3a)+(c/a)(b/3a),
+so (x+b/3a)³+(c/a)(x+b/3a)-3(b/3a)²(x+b/3a)+d/a+(b/3a)²(2b/3a)-(c/a)(b/3a)=0,
+so (x+b/3a)³ + [c/a-3(b/3a)²] (x+b/3a) + d/a + 2(b/3a)³ - (bc/3a²) = 0,
+so y³ + Ay + B = 0, with y = x+b/3a, A = c/a-3(b/3a)², and B = d/a+2(b/3a)³-(bc/3a²)
+y = u + v, so y³ = (u+v)³ =  u³ + 3u²v + 3uv² + v³ = u³ + v³ + 3uv(u+v) = u³ + v³ + 3uvy,
+so y³ - (u³ + v³ + 3uvy) = 0, so y³  - (3uv)y - (u³ + v³) = 0 = y³ + Ay + B,
+so A = -3uv and B = -(u³ + v³), so A³ = -27u³v³ and 27u³B = -27(u³)² - 27u³v³,
+so 27u³B = -27(u³)² + A³, so 27(u³)² + 27B(u³) - A³ = 0, so now we have, from the
+quadratic formula: u³ = { -(27B) +- ²√[(27B)² - 4*(27)*(-A³)] } / { 2*(27) },
+so u³ = { -27B +- ²√[(27)²B² + 4*(27)²*A³/27] } / { 2*(27) },
+so u³ = [ -B +- ²√(B² + 4*A³/27) ] / 2, so B = -([ -B +- ²√(B² + 4*A³/27) ]/2 + v³),
+so v³ = -B - [ -B +- ²√(B² + 4*A³/27) ]/2, so u = ³√{[ -B +- ²√(B² + 4*A³/27) ] / 2}
+and v = ³√{-B - [ -B +- ²√(B² + 4*A³/27) ]/2}, so y = u + v, which is the following:
+y = ³√{[ -B +- ²√(B² + 4*A³/27) ] / 2} + ³√{-B - [ -B +- ²√(B² + 4*A³/27) ]/2}
+so since y = x + b/3a, then we have x = y - b/3a, so:
+x = ³√{[ -B +- ²√(B² + 4*A³/27) ] / 2} + ³√{-B - [ -B +- ²√(B² + 4*A³/27) ]/2} - b/3a
+where A = c/a-3(b/3a)², and B = d/a+2(b/3a)³-(bc/3a²).
+# Find all x, y, z in the real numbers (R) such that (x + y + z)² = x³ + y³ + z³:
+First, we have the obvious solution of x = y = z = 0,
+because (0 + 0 + 0)² = 0² = 0 = 0 + 0 + 0 = 0³ + 0³ + 0³;
+second we have the obvious solution of x = -1, y = 1, z = 0,
+because (-1 + 1 + 0)² = 0² = 0 = -1 + 1 + 0 = (-1)³ + 1³ + 0³
+and permutations thereof by symmetry;
+third we have the obvious solution of x = -1, y = 1, z = 1,
+because (-1 + 1 + 1)² = 1² = 1 = -1 + 1 + 1 = (-1)³ + 1³ + 1³,
+and permutations thereof by symmetry;
+fourth we have the obvious solution of x = 1, y = 2, z = 3,
+because (1 + 2 + 3)² = 6² = 36 = 1 + 8 + 27 = 1³ + 2³ + 3³,
+and permutations thereof by symmetry;
+fifth we have the obvious solution of x = 1, y = 2, z = 0,
+because (1 + 2 + 0)² = 3² = 9 = 1 + 8 + 0 = 1³ + 2³ + 0³,
+and permutations thereof by symmetry;
+sixth we have the obvious solution of x = 1, y = 0, z = 0,
+because (1 + 0 + 0)² = 1² = 1 = 1 + 0 + 0 = 1³ + 0³ + 0³,
+and permutations thereof by symmetry; AND
+seventh we have more generally (x+y)² + 2(x+y)z + z² = x³ + y³ + z³,
+so x³ + y³ + z³ - (x+y)² - 2(x+y)z - z² = 0,
+so z³ - z² - 2(x+y)z + (x³ + y³)* - (x+y)² = 0,
+so z³ - z² - 2(x+y)z + (x+y)(x²-xy+y²)* - (x+y)² = 0,
+so z³ - z² - 2(x+y)z + (x+y)(x²-xy+y²-(x+y)) = 0,
+so z³ - z² - 2(x+y)z + (x+y)(x²-xy+y²-x-y) = 0,
+using the cubic formula with the following we have:
+a = 1, b = -1, c = -2(x+y), and d = (x+y)(x²-xy+y²-x-y)
+z = ³√{q + ²√[q² + (r-p²)³]} + ³√{q² - ²√[q + (r-p²)³]} + p
+p = -b/(3a),  q = p³ + (bc-3ad)/(6a²),  and  r = c/(3a)
+p = -(-1)/(3*1) = 1/3,  q = (1/3)³ + (-1*-2(x+y)-3*1*d)/(6*1²), so
+q = 1/27 + (2x+2y-3d)/6 = 2/54 + 9(2x+2y-3d)/54 = (2+18x+18y-27d)/54,
+and  r = -2(x+y)/(3*1) = (-2x-2y)/3, so we have that:
+z = ³√{(2+18x+18y-27d)/54 + ²√[(2+18x+18y-27d)²/54² + ((-2x-2y)/3-(1/3)²)³]} + ³√{(2+18x+18y-27d)²/54² - ²√[(2+18x+18y-27d)/54 + ((-2x-2y)/3-(1/3)²)³]} + (1/3),
+so z = ³√{(2+18x+18y-27d)/54 + ²√[(2+18x+18y-27d)²/54² + (6x+6y+1)³/9³]} + ³√{(2+18x+18y-27d)²/54² - ²√[54*(2+18x+18y-27d)/54² - (2x+2y+1)³/9³]} + (1/3),
+so z = ³√{(2+18x+18y-27d)/54 + ²√[(2+18x+18y-27d)²/54² + 4(6x+6y+1)³/54²]} + ³√{(2+18x+18y-27d)²/54² - ²√[54(2+18x+18y-27d)/54² - 4(2x+2y+1)³/54²]} + (1/3),
+so z = ³√{(2+18x+18y-27d)+²√[(2+18x+18y-27d)²+4(6x+6y+1)³]}/(3*³√(2)) + ³√{(2+18x+18y-27d)²-54*²√[54(2+18x+18y-27d)-4(2x+2y+1)³]}/(9*³√(4)) + (1/3),
+where d = (x+y)(x²-xy+y²-x-y).
+*            x² - xy + y²
+        -------------------------
+(x + y) |   x³ +  0  + y³
+          -(x³ + x²y)
+           ----------
+                 - x²y + y³
+               -(- x²y - xy²)
+                -------------
+                         y³ + xy²
+                       -(xy² + y³)
+                        ----------
+                               0
 # Find all solutions:
 (a) 9x == 5 (mod 25)
-First, there is one (1) solution since gcd(9,25) = 1 and 1 | 5.
+First, there is one (1) solution since gcd(9, 25) = 1 and 1 | 5.
 Now we have the following to calculate via the Euclidean Algorithm:
 25 = 2*9 + 7,   9 = 1*7 + 2,   and   7 = 3*2 + 1,   so
 7 = 25 - 2*9,   2 = 9 - 1*7,   and   1 = 7 - 3*2,   so
@@ -79,8 +540,6 @@ Using the quadratic formula yet again, like last time, we now have the following
 x = [ -(B-E) +- √( (B-E)² - 4*(A-D)*(C-1) ) ] / [ 2*(A-D) ]  or
 x = [ -(B+E) +- √( (B+E)² - 4*(A+D)*(C+1) ) ] / [ 2*(A+D) ],
 but this time we must be careful, since A-D or A+D is = to 0.
-# Absurdle:
-https://qntm.org/files/absurdle/absurdle.html
 # Find all quadratic residues mod 13, 16, 17, and 23:
 For 13, we have 6 quadratic residues:
 1² ==  1 (mod 13),
