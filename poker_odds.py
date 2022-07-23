@@ -113,7 +113,7 @@ def start():
   (F);Odds.calculateAndPlot("Hole Cards:");addButton["text"]="Add Card";top(T)
 from tkinter import *; tot=51*50*49*48*47*46;win=Tk();win.lift();import PyQt5
 action = Label(win,text=""); suits = ["Clubs", "Diamonds", "Spades", "Hearts"]
-i = "C:\\Users\David Colby\OneDrive\Documents\Tasks\Setup\Windows Software"+\
+i = "C:\\Users\Administrator\OneDrive\Documents\Tasks\Setup\Windows Software"+\
 "\Poker and Math\Cards.ico";suit=StringVar();num=StringVar();win.option_add(\
 "*Font",('Verdana',30)); addButton = Button(win,text="Start Hole Cards",\
 command=start,fg="blue");win.iconbitmap(i);addButton.pack();action.pack()

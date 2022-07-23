@@ -1,5 +1,126 @@
 # Drop your proofs and solutions here:
 https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
+# Statistics questions for Ashley on Tuesdays or Saturdays:
+(1) Consider the following statement:
+    If n = 100 random samples of water from the lake were taken and the 95% CI 
+    on µ computed, and this process were repeated 1000 times, 950 of the CIs would
+    contain the true value of µ. Is this statement correct? Explain your answer.
+(2) An article in the Journal of Agricultural Science ["The Use of Residual Maximum 
+    Likelihood to Model Grain Quality Characteristics of Wheat with Variety,
+    Climatic and Nitrogen Fertilizer Effects" (1997, Vol. 128, pp. 135-142)]
+    investigated means of wheat grain crude protein content (CP) and Hagberg
+    falling number (HFN) surveyed in the UK. The analysis used a variety of
+    nitrogen fertilizer applications (kg N/ha), temperature (°C), and total monthly
+    rainfall (mm). The data shown below describe temperatures for wheat grown at
+    Harper Adams Agricultural College between 1982 and 1993. The temperatures
+    measured in June were obtained as follows:
+        15.2, 14.2, 14.0, 12.2, 14.4, 12.5, 14.3, 14.2, 13.5, 11.8, 15.2
+    Assume that the standard deviation is known to be σ = 0.5.
+    (a) Construct a 99% two-sided confidence interval on the mean temperature.
+    (b) Construct a 95% lower-confidence bound on the mean temperature.
+    (c) Suppose that we wanted to be 95% confident that the error in 
+        estimating the mean temperature is less than 2 degrees Celsius.
+        What sample size should be used?
+    (d) Suppose that we wanted the total width of the two-sided confidence interval 
+        on mean temperature to be 1.5 degrees Celsius at 95% confidence. 
+        What sample size should be used?
+(3) Let X1, X2, X3, ... Xn denote independent and identically distributed random 
+    variables from a Pareto distribution with parameters α and ẞ, where ẞ is known. 
+    Then if α > 0, fx(x;α,ẞ) = α * ẞ^α * x^-(a+1) if x ≥ ẞ else 0 otherwise. 
+    (a) Show that E[X] = αβ / (α-1) if α > 1 and E[X] is undefined if 0 < α < 1.
+    (b) Derive the method of moment estimator for α where it is defined.
+# Determine all quadratic residues mod 13, 16, and 17:
+     x           | 1 | 2 | 3 | 4 |  5 |  6
+-------------------------------------------
+a == x² (mod 13) | 1 | 4 | 9 | 3 | 12 | 10
+So, all quadratic residues mod 13 are 1, 3, 4, 9, 10, and 12.
+     x           | 1 | 3 | 5 | 7 | 9 | 11 | 13 | 15
+----------------------------------------------------
+a == x² (mod 16) | 1 | 9 | 9 | 1 | 1 |  9 |  9 |  1
+So, all quadratic residues mod 16 are 1 and 9.
+     x           | 1 | 2 | 3 |  4 |  5 |  6 |  7 |  8 
+-------------------------------------------------------
+a == x² (mod 17) | 1 | 4 | 9 | 16 |  8 |  2 | 15 | 13 
+So, all quadratic residues mod 17 are 1, 2, 4, 8, 9, 13, 15, and 16.
+# Evaluate the following:
+(24 / 19) == (4 / 19) * (6 / 19) == 1 * 6^(19-1)/2 == 6^(18/2)
+          == 6^9 == (6^2)^4 * 6^1 == 36^4 * 6 == (-2)^4 * 6 
+          == 16 * 6 == -3 * 6 == -18 == 1 (mod 19)
+(18 / 11) == (9 / 11) * (2 / 11) == 1 * 2^(11-1)/2 == 2^(10/2)
+          == 2^5 == 32 == -1 (mod 11)
+# Find, and then prove, each limit, using the epsilon-delta (ε-ẟ) definition:
+These problems are from the video on blackpenredpen's YouTube channel 
+linked here: youtube.com/watch?v=luiJmucU7lI and these answers are based on 
+blackpenredpen's technique from his YouTube channel, a video of an example 
+[ of which is linked here: youtube.com/watch?v=DdtEQk_DHQs.
+ 1. lim as x ->  1 of 6x - 2 = 6*(1) - 2 = 6 - 2 = 4, because
+    if we let f(x) = 6x - 2, L = 4, and a = 1, then we have the following:
+    Given ε > 0, choose ẟ = ε/6. Suppose 0 < |x - a| = |x - 1| < ẟ, 
+    and check: |f(x) - L| = |(6x - 2) - 4| = |6x - 6| = |6 * (x - 1)|,
+    so we now have |f(x) - L| = |6| * |x - 1| < 6 * ẟ = 6 * (ε/6) = ε. [[QED]
+ 2. lim as x -> -2 of (2x + 7) = 2*(-2) + 7 = -4 + 7 = 3, because
+    if we let f(x) = 2x + 7, L = 3, and a = -2, then we have the following:
+    Given ε > 0, choose ẟ = ε/2. Suppose 0 < |x - a| = |x - (-2)| = |x + 2| < ẟ,
+    and check: |f(x) - L| = |(2x + 7) - 3| = |2x + 4| = |2 * (x + 2)|,
+    so we now have |f(x) - L| = |2| * |x + 2| < 2 * ẟ = 2 * (ε/2) = ε. [QED]
+ 3. lim as x ->  3 of (2x/3 - 5) = 2*(3)/3 - 5 = 2 - 5 = -3, because
+    if we let f(x) = 2x/3 - 5, L = -3, and a = 3, then we have the following:
+    Given ε > 0, choose ẟ = 3ε/2. Suppose 0 < |x - a| = |x - 3| < ẟ,
+    and check: |f(x) - L| = |(2x/3 - 5) - (-3)| = |2x/3 - 2| = |2/3 * (x - 3)|,
+    so we now have |f(x) - L| = |2/3| * |x - 3| < 2/3 * ẟ = 2/3 * (3ε/2) = ε. [QED]
+ 4. lim as x ->  4 of √(x) = √(4) = 2, because
+    if we let f(x) = √(x), L = 2, and a = 4, then we have the following:
+    Given ε > 0, choose ẟ = ε. Suppose 0 < |x - a| = |x - 4| < ẟ, and
+    check: |f(x) - L| = |√(x) - 2| = |√(x) - 2| * |√(x) + 2| / |√(x) + 2|,
+    so we now have |f(x) - L| = |x - 4| / |√(x) + 2| < |x - 4| < ẟ = ε, 
+    because |√(x) + 2| > 1 for all x >= 0. [QED]
+ 5. lim as x ->  6 of √(3x - 2) = √(3*(6) - 2) = √(18 - 2) = √(16) = 4, because
+    if we let f(x) = √(3x - 2), L = 4, and a = 6, then we have the following:
+    Given ε > 0, choose ẟ = ε/3. Suppose 0 < |x - a| = |x - 6| < ẟ, and
+    check: |f(x) - L| = |√(3x - 2) - 4| = |√(3x - 2) - 4| * |√(3x - 2) + 4| / A,
+    where A = |√(3x - 2) + 4|, which is > 1 for all 3x - 2 > 0, so we now have 
+    |f(x) - L| = |3x - 2 - 16| / A < |3x - 18| = 3|x - 6| < 3ẟ = 3*(ε/3) = ε. [QED]
+ 6. lim as x ->  3 of (2x² + 1) = 2*(3)² + 1 = 2*9 + 1 = 18 + 1 = 19, because
+    if we let f(x) = 2x² + 1, L = 19, and a = 3, then we have the following:
+    Given ε > 0, choose ẟ = min(1, ε/14). Suppose 0 < |x - a| = |x - 3| < ẟ,
+    and check: |f(x) - L| = |(2x² + 1) - 19| = |2x² - 18| = 2 * |x + 3| * |x - 3|,
+    so if we let ẟ be <= 1, then |x - 3| < ẟ means that |x - 3| < 1, so we have:
+    -1 < x - 3 < 1, so 5 < x + 3 < 7, so |x + 3| < 7, so we now have:
+    |f(x) - L| = 2 * |x + 3| * |x - 3| < 2*7*ẟ = 14 * ẟ <= 14 * (ε/14) = ε. [QED]  
+ 7. lim as x -> -2 of (x² - 3x) = (-2)² - 3*(-2) = 4 - (-6) = 4 + 6 = 10, because
+    if we let f(x) = x² - 3x, L = 10, and a = -2, then we have the following:
+    Given ε > 0, choose ẟ = min(1, ε/8).
+    Suppose 0 < |x - a| = |x - (-2)| = |x + 2| < ẟ, and check: 
+    |f(x) - L| = |(x² - 3x) - 10| = |x - 5| * |x + 2|, so if we let ẟ be <= 1, 
+    then |x + 2| < ẟ means that |x + 2| < 1, so we have:
+    -1 < x + 2 < 1, so -8 < x - 5 < -6, so |x - 5| < 8, so we now have: 
+    |f(x) - L| = |x - 5| * |x + 2| < 8 * ẟ <= 8 * (ε/8) = ε. [QED]
+ 8. lim as x ->  2 of (x³) = (2)³ = 8, because
+    if we let f(x) = x³, L = 8, and a = 2, then we have the following:
+    Given ε > 0, choose ẟ = min(1, ε/19). Suppose 0 < |x - a| = |x - 2| < ẟ, 
+    and check: |f(x) - L| = |x³ - 8| = |x² + 2x + 4| * |x - 2| <=
+        (|x²| + |2x + 4|) * |x - 2| = (|x²| + 2 * |x + 2|) * |x - 2|, 
+    so if we let ẟ be <= 1, then |x - 2| < ẟ means that |x - 2| < 1, so we have:
+    -1 < x - 2 < 1, so 1 < x < 3 and 3 < x + 2 < 5, so |x²| < 3² = 9 and 
+    |x + 2| < 5, so we now have: |f(x) - L| = (|x²| + 2 * |x + 2|) * |x - 2| <
+        (9 + 2 * 5) * ẟ = (9 + 10) * ẟ = 19 * ẟ <= 19 * (ε/19) = ε. [QED]
+ 9. lim as x ->  2 of (1 / x) = 1/2, because:
+    if we let f(x) = 1/x, L = 1/2, and a = 2, then we have the following:
+    Given ε > 0, choose ẟ = min(1, ε). Suppose 0 < |x - a| = |x - 2| < ẟ, & check:
+    |f(x) - L| = |1/x - 1/2| = |2/(2x) - x/(2x)| = |2 - x| / |2x| = |x - 2| / |2x|,
+    so if we let ẟ be <= 1, then |x - 2| < ẟ means that |x - 2| < 1, so we have:
+    -1 < x - 2 < 1, so 1 < x < 3, so 2 < 2x < 6, so |2x| > 1, so we now have:
+    |f(x) - L| = |x - 2| / |2x| < |x - 2| < ẟ = ε. [QED]
+10. lim as x ->  1 of 1 / (2x + 1) = 1 / (2*(1) + 1) = 1 / (2 + 1) = 1/3, because
+    if we let f(x) = 1 / (2x + 1), L = 1/3, and a = 1, then we have the following:
+    Given ε > 0, choose ẟ = min(1, 3ε/2). Suppose 0 < |x - a| = |x - 1| < ẟ, and
+    check: |f(x) - L| = |1/(2x+1) - 1/3| = |3/[3*(2x+1)] - (2x+1)/[3*(2x+1)]| 
+        = |3 - (2x+1)| / [3*|2x+1|] = |2 - 2x| / [3 * |2x + 1|]
+        = 2 * |1 - x| / [3 * (2x + 1)] = 2 * |x - 1| / [3 * |2x + 1|],
+    so if we let ẟ be <= 1, then |x - 1| < ẟ means that |x - 1| < 1, so we have:
+    -1 < x - 1 < 1, so 0 < x < 2, so 0 < 2x < 4, so 1 < 2x + 1 < 5,
+    so |2x + 1| > 1, so we now have:
+    |f(x) - L| = 2 * |x - 1| / [3 * |2x + 1|] < 2 * ẟ/3 <= 2 * (3ε/2)/3 = ε. [QED]
 ### Order Modulo n Warmups:
 # Find ord_10(7) and ord_25(9):
 ord_10(7) = N <===> 7^N = 1 (mod 10), so we list the powers of 7^n (mod 10):
