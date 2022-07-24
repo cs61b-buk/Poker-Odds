@@ -26,9 +26,9 @@ https://www.wyzant.com/resources/answers?filter=unanswered&sort=newest
         What sample size should be used?
 (3) Let X1, X2, X3, ... Xn denote independent and identically distributed random 
     variables from a Pareto distribution with parameters α and ẞ, where ẞ is known. 
-    Then if α > 0, fx(x;α,ẞ) = α * ẞ^α * x^-(a+1) if x ≥ ẞ else 0 otherwise. 
+    Then if α > 0, fx(x;α,ẞ) = α * ẞ^α * x^-(α+1) if x ≥ ẞ else 0 otherwise. 
     (a) Show that E[X] = αβ / (α-1) if α > 1 and E[X] is undefined if 0 < α < 1.
-    (b) Derive the method of moment estimator for α where it is defined.
+    (b) Derive the method of moment estimator for α where E[X] is defined.
 # Determine all quadratic residues mod 13, 16, and 17:
      x           | 1 | 2 | 3 | 4 |  5 |  6
 -------------------------------------------
